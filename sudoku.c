@@ -76,10 +76,10 @@ List* get_adj_nodes(Node* n)
             vacioJ = j;
             vacioI = i;
           }
-          if(vacioJ != -1)break;
+          if(vacioI != -1)break;
       }
       /*Otro por validacion*/
-    }
+    }if(vacioI == 0)return list;
     
     return list;
 }

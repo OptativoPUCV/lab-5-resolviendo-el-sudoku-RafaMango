@@ -19,3 +19,14 @@ sudoku.c:68:9: error: variable 'vacioI' set but not used [-Werror=unused-but-set
          ^~~~~~
 cc1.exe: all warnings being treated as errors
 c3504b4
+Tue, May 13, 2025 12:53:45 PM: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:67:9: error: variable 'vacioJ' set but not used [-Werror=unused-but-set-variable]
+     int vacioJ = -1;
+         ^~~~~~
+cc1.exe: all warnings being treated as errors
+422e582
