@@ -54,7 +54,21 @@ Cada vez que aparezca un número i, verifique que la casilla i del arreglo sea i
 el número ya estaba marcado por lo que la fla/columna/submatriz no es válida.*/
 int is_valid(Node* n)
 {
-  //int i,j,k,p;
+  /*
+  for(int i = 0; i < 9; i++)
+  {
+    int fila[10] = {0};
+    for(int j = 0; j < 9; j++)
+    {
+      int valido = n->sudo[i][j];
+      if(valido != 0)
+      {
+        if(fila[n->sudo[i][j]] == 1) return 0;
+      } 
+    }
+    fila->sudo[i][j];
+  }  
+  */
   return 1;
 }
 
@@ -63,6 +77,7 @@ Para el caso del ejemplo, la función debería retornar una lista con 9 nodos. C
 Utilice la función Node* copy(Node* n) para copiar nodos.*/
 List* get_adj_nodes(Node* n)
 {
+  /**
     List* list=createList();
     //int vacioJ = -1;
     int vacioI = -1;
@@ -78,11 +93,30 @@ List* get_adj_nodes(Node* n)
           }
           if(vacioI != -1)break;
       }
-      /*Otro por validacion*/
+ 
     }if(vacioI == 0)return list;
     
     return list;
+
+    int i ,j;
+    List* list=createList();
+    for(i = 0; i < 9; i++)
+    {
+      for(j = 0; j < 9; j++)
+      {
+          if(n->sudo[i][j]== 0)
+          {
+            for(int k = 0; k <= 9; k++)
+            {
+
+            }
+          }
+      }
+    }
+    **/
 }
+ 
+
 
 /*4.Implemente la función int is_final(Node * n). Esta función retorna 1 si el nodo corresponde a un nodo final (es decir, todos los valores de la matriz son distintos a 0) y 0 en caso contrario.
 Ya está listo el grafo implícito, ahora necesitamos construir un método de búsqueda que a partir del estado inicial sea capaz de explorar el grafo de manera sistemática hasta alcanzar un nodo final.*/
