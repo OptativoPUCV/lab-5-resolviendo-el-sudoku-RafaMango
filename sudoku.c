@@ -64,7 +64,7 @@ Utilice la función Node* copy(Node* n) para copiar nodos.*/
 List* get_adj_nodes(Node* n)
 {
     List* list=createList();
-    int vacioJ = -1;
+    //int vacioJ = -1;
     int vacioI = -1;
     int i, j;
     for(i = 0; i < 9; i++)
@@ -73,7 +73,7 @@ List* get_adj_nodes(Node* n)
       {
           if(n->sudo[i][j] == 0)
           {
-            vacioJ = j;
+            //vacioJ = j;
             vacioI = i;
           }
           if(vacioI != -1)break;

@@ -39,3 +39,9 @@ sudoku.c:67:9: error: variable 'vacioJ' set but not used [-Werror=unused-but-set
          ^~~~~~
 cc1.exe: all warnings being treated as errors
 a169ec1
+Tue, May 13, 2025 12:54:44 PM: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  1|4
+total_score: 10/70
+3ef2a89
