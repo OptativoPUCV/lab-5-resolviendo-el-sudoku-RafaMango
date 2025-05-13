@@ -8,3 +8,14 @@ Tue, May 13, 2025 12:34:00 PM:
  tests:  1|4
 total_score: 10/70
 7d14d67
+Tue, May 13, 2025 12:52:53 PM: 
+ sudoku.c | 35 ++++++++++++++++++++++++++++-------
+ 1 file changed, 28 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:68:9: error: variable 'vacioI' set but not used [-Werror=unused-but-set-variable]
+     int vacioI = -1;
+         ^~~~~~
+cc1.exe: all warnings being treated as errors
+c3504b4
