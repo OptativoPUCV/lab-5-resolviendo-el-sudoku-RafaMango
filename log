@@ -72,3 +72,9 @@ sudoku.c:117:11: error: return makes pointer from integer without a cast [-Werro
            ^
 cc1.exe: all warnings being treated as errors
 57ad75b
+Tue, May 13, 2025  1:12:44 PM: 
+ sudoku.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  1|4
+total_score: 10/70
+c39baf3

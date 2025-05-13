@@ -77,6 +77,7 @@ Para el caso del ejemplo, la función debería retornar una lista con 9 nodos. C
 Utilice la función Node* copy(Node* n) para copiar nodos.*/
 List* get_adj_nodes(Node* n)
 {
+  List* list=createList();
   /**
     List* list=createList();
     //int vacioJ = -1;
@@ -114,7 +115,7 @@ List* get_adj_nodes(Node* n)
       }
     }
     **/
-   return 1;
+   return list;
 }
  
 
