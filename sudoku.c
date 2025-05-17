@@ -181,7 +181,7 @@ Node* DFS(Node* initial, int* contador)
   pushBack(pila, initial);
   Node* current;
 
-  while(is_empty(pila) != NULL)
+  while(!is_empty(pila))
   {
     current = front(pila);
     popFront(pila);
@@ -194,7 +194,7 @@ Node* DFS(Node* initial, int* contador)
     }
     List* adj_nodes = get_adj_nodes(current);
     Node* node;
-    while(is_empty(adj_nodes) != NULL)
+    while(!is_empty(adj_nodes))
     {
       node = front(adj_nodes);
       popFront(adj_nodes);
