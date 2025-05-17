@@ -198,10 +198,7 @@ Node* DFS(Node* initial, int* contador)
     {
       node = front(adj_nodes);
       popFront(adj_nodes);
-      if(is_valid(node)== 1)
-      {
-        pushBack(pila, node);
-      }
+      pushBack(pila, node);
     }
     clean(adj_nodes);
     free(current);
