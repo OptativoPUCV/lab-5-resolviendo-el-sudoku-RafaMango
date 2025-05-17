@@ -88,3 +88,9 @@ sudoku.c:93:23: error: expected expression before ')' token
      for(p = 0; p< 9;++)
                        ^
 a2c1818
+sá., 17 de may. de 2025 16:40:39: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|4
+total_score: 10/70
+e6c65e3
