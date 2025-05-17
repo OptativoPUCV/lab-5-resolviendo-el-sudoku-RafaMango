@@ -118,3 +118,17 @@ sá., 17 de may. de 2025 16:52:32:
  tests:  4|3
 total_score: 30/70
 0bdf3c5
+sá., 17 de may. de 2025 16:55:01: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:184:24: error: comparison between pointer and integer [-Werror]
+   while(is_empty(pila) != NULL)
+                        ^~
+sudoku.c:197:31: error: comparison between pointer and integer [-Werror]
+     while(is_empty(adj_nodes) != NULL)
+                               ^~
+cc1.exe: all warnings being treated as errors
+c422164
