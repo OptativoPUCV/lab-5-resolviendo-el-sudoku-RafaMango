@@ -175,9 +175,39 @@ int is_final(Node* n)
   return 1; // retorna 1 si el nodo corresponde a un nodo final
 }
 
-Node* DFS(Node* initial, int* cont)
+Node* DFS(Node* initial, int* contador)
 {
-  
+  List * pila = createStack();
+  pushBack(pila, initial);
+  Node* current;
+
+  while(is_empty(pila) == 0)
+  {
+    current = front(pila);
+    popFront(pila);
+    (*contador)++;
+
+    if(is_final(current)== 1)
+    {
+      clean(pila);
+      return current;
+    }
+    List* adj_nodes = get_adj_nodes(current);
+    Node* node;
+    while(is_empty(adj_nodes) == 0)
+    {
+      node = front(adj_nodes);
+      popFront(adj_nodes);
+      if(is_valid(node)== 1)
+      {
+        pushBack(pila, node);
+      }
+    }
+    clean(adj_nodes);
+    free(current);
+
+  }
+  clean(pila);
 
   return NULL;
 }
