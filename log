@@ -138,3 +138,18 @@ sá., 17 de may. de 2025 16:55:35:
  tests:  4|3
 total_score: 30/70
 82497d0
+sá., 17 de may. de 2025 17:01:25: 
+ sudoku.c | 43 +++++++++++++++++++------------------------
+ 1 file changed, 19 insertions(+), 24 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:140:23: error: passing argument 1 of 'copy' makes pointer from integer without a cast [-Werror=int-conversion]
+     Node * new = copy(n);
+                       ^
+In file included from test.c:5:0:
+sudoku.c:15:7: note: expected 'Node * {aka struct <anonymous> *}' but argument is of type 'int'
+ Node* copy(Node* n){
+       ^~~~
+cc1.exe: all warnings being treated as errors
+7c95d92

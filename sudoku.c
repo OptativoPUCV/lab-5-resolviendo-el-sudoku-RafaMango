@@ -117,44 +117,39 @@ Utilice la función Node* copy(Node* n) para copiar nodos.*/
 List* get_adj_nodes(Node* n)
 {
   List* list=createList();
-  /**
-    List* list=createList();
-    //int vacioJ = -1;
-    int vacioI = -1;
-    int i, j;
-    for(i = 0; i < 9; i++)
+  int fila = -1;
+  int col = -1;
+  int i,j;
+  for(i = 0; i < 9 && fila == -1; i++)
+  {
+    for(j = 0; j < 9 && fila == -1; j++)
     {
-      for(j = 0; j < 9; j++)
+      if(n->sudo[i][j]== 0)
       {
-          if(n->sudo[i][j] == 0)
-          {
-            //vacioJ = j;
-            vacioI = i;
-          }
-          if(vacioI != -1)break;
-      }
- 
-    }if(vacioI == 0)return list;
-    
-    return list;
-
-    int i ,j;
-    List* list=createList();
-    for(i = 0; i < 9; i++)
-    {
-      for(j = 0; j < 9; j++)
-      {
-          if(n->sudo[i][j]== 0)
-          {
-            for(int k = 0; k <= 9; k++)
-            {
-
-            }
-          }
+        fila = i;
+        col = j;
       }
     }
-    **/
-   return list;
+  }
+  if(fila == 1 && col == -1)
+  {
+    return list; //no hay nodos adyacentes
+  }
+  for(int n = 1; n <= 9; n++)
+  {
+    Node * new = copy(n);
+    new->sudo[fila][col] = n;
+    if(is_valid(new))
+    {
+      pushBack(list,new);
+    }
+    else
+    {
+      free(new);
+    }
+  }
+
+  return list;
 }
  
 
