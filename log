@@ -78,3 +78,13 @@ Tue, May 13, 2025  1:12:44 PM:
  tests:  1|4
 total_score: 10/70
 c39baf3
+sá., 17 de may. de 2025 16:39:18: 
+ sudoku.c | 60 ++++++++++++++++++++++++++++++++++++++++++++++++++----------
+ 1 file changed, 50 insertions(+), 10 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'is_valid':
+sudoku.c:93:23: error: expected expression before ')' token
+     for(p = 0; p< 9;++)
+                       ^
+a2c1818

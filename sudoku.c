@@ -54,22 +54,59 @@ Cada vez que aparezca un número i, verifique que la casilla i del arreglo sea i
 el número ya estaba marcado por lo que la fla/columna/submatriz no es válida.*/
 int is_valid(Node* n)
 {
-  /*
-  for(int i = 0; i < 9; i++)
+  int i,j,k,p;
+  //para verificar filas
+  for(i = 0; i< 9; i++)
   {
-    int fila[10] = {0};
-    for(int j = 0; j < 9; j++)
+    int row[10] = {0};
+    for(j= 0; j < 9;j++)
     {
-      int valido = n->sudo[i][j];
-      if(valido != 0)
-      {
-        if(fila[n->sudo[i][j]] == 1) return 0;
-      } 
+      if(n->sudo[i][j]!= 0){
+        if(row[n->sudo[i][j]]== 1)
+        {
+          return 0; //no es valido
+        }
+      }
     }
-    fila->sudo[i][j];
-  }  
-  */
+  }
+
+  //Para verificar columnas
+  for(i = 0; i < 9;i++)
+  {
+    int col[10]= {0};
+    for(j = 0; j < 9;j++)
+    {
+      if(n->sudo[j][i]!= 0)
+      {
+        if(col[n->sudo[j][i]]== 1)
+        {
+          return 0; //no es valido
+        }
+      }
+    }
+  }
+
+  //Para verificar submatrices
+  for(k = 0; k < 9;k++)
+  {
+    int sub[10]= {0};
+    for(p = 0; p< 9;++)
+    {
+      int i = 3*(k/3)+(p/3);
+      int j = 3*(k%3)+(p%3);
+      if(n->sudo[i][j]!= 0)
+      {
+        if(sub[n->sudo[i][j]]== 1)
+        {
+          return 0; //no es valido
+        }
+        sub[n->sudo[i][j]] = 1;
+      }
+    }
+  }
   return 1;
+
+
 }
 
 /*Recuerde que los nodos adyacentes son generados aplicando las acciones al estado actual.
@@ -136,7 +173,10 @@ int is_final(Node* n)
   return 1; // retorna 1 si el nodo corresponde a un nodo final
 }
 
-Node* DFS(Node* initial, int* cont){
+Node* DFS(Node* initial, int* cont)
+{
+  
+
   return NULL;
 }
 
