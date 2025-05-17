@@ -135,10 +135,10 @@ List* get_adj_nodes(Node* n)
   {
     return list; //no hay nodos adyacentes
   }
-  for(int n = 1; n <= 9; n++)
+  for(int num = 1; num <= 9; num++)
   {
     Node * new = copy(n);
-    new->sudo[fila][col] = n;
+    new->sudo[fila][col] = num;
     if(is_valid(new))
     {
       pushBack(list,new);
