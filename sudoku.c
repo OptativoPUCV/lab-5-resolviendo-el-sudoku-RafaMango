@@ -66,6 +66,7 @@ int is_valid(Node* n)
         {
           return 0; //no es valido
         }
+        row[n->sudo[i][j]] = 1;
       }
     }
   }
@@ -82,6 +83,7 @@ int is_valid(Node* n)
         {
           return 0; //no es valido
         }
+        col[n->sudo[j][i]] = 1;
       }
     }
   }
