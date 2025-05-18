@@ -209,3 +209,9 @@ sudoku.c:143:8: error: implicit declaration of function 'is_valid' [-Werror=impl
         ^~~~~~~~
 cc1.exe: all warnings being treated as errors
 70a23b6
+do., 18 de may. de 2025 15:48:55: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 55/70
+8e77284
