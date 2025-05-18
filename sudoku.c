@@ -59,15 +59,15 @@ int is_valid(Node* n)
   //para verificar filas
   for(i = 0; i< 9; i++)
   {
-    int row[10] = {0};
+    int fila[10] = {0};
     for(j= 0; j < 9;j++)
     {
       if(n->sudo[i][j]!= 0){
-        if(row[n->sudo[i][j]]== 1)
+        if(fila[n->sudo[i][j]]== 1)
         {
           return 0; //no es valido
         }
-        row[n->sudo[i][j]] = 1;
+        fila[n->sudo[i][j]] = 1;
       }
     }
   }
@@ -108,10 +108,7 @@ int is_valid(Node* n)
     }
   }
   return 1;
-
-
 }
-
 /*Recuerde que los nodos adyacentes son generados aplicando las acciones al estado actual.
 Para el caso del ejemplo, la función debería retornar una lista con 9 nodos. Cada uno de ellos idéntico al nodo original pero cambiando el valor de la primera casilla vacía, es decir: sudo[0][2], por 1, 2, ..., 9.
 Utilice la función Node* copy(Node* n) para copiar nodos.*/
