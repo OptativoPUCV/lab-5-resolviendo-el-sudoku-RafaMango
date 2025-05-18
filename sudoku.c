@@ -168,13 +168,14 @@ int is_final(Node* n)
 /*
 Cree un stack S (pila) e inserte el nodo.
 Mientras el stack S no se encuentre vacío:
-a) Saque y elimine el primer nodo de S.
-b) Verifique si corresponde a un estado final, si es así retorne el nodo.
-c) Obtenga la lista de nodos adyacentes al nodo.
-d) Agregue los nodos de la lista (uno por uno) al stack S.
-e) Libere la memoria usada por el nodo.
+a) Saque y elimine el primer nodo de S. X
+b) Verifique si corresponde a un estado final, si es así retorne el nodo. X
+c) Obtenga la lista de nodos adyacentes al nodo. X
+d) Agregue los nodos de la lista (uno por uno) al stack S. X
+e) Libere la memoria usada por el nodo. X
+f) Libere la memoria usada por la lista de nodos adyacentes. X
 Si terminó de recorre el grafo sin encontrar una solución, retorne NULL.
-Almacene en la variable cont, la cantidad de iteraciones que realiza el algoritmo.
+Almacene en la variable cont, la cantidad de iteraciones que realiza el algoritmo. X
 */
 Node* DFS(Node* initial, int* contador)
 {
@@ -182,9 +183,9 @@ Node* DFS(Node* initial, int* contador)
   pushBack(pila, initial);
   Node* current;
 
-  while(!is_empty(pila))
+  while(!is_empty(pila)) //no esta vacia
   {
-    current = front(pila);
+    current = front(pila); 
     popFront(pila);
     (*contador)++;
 
@@ -193,15 +194,15 @@ Node* DFS(Node* initial, int* contador)
       clean(pila);
       return current;
     }
-    List* adj_nodes = get_adj_nodes(current);
+    List* adjNodes = get_adj_nodes(current);
     Node* node;
-    while(!is_empty(adj_nodes))
+    while(!is_empty(adjNodes)) //no esta vacia
     {
-      node = front(adj_nodes);
-      popFront(adj_nodes);
-      pushBack(pila, node);
+      node = front(adjNodes); 
+      popFront(adjNodes); 
+      pushBack(pila, node); 
     }
-    clean(adj_nodes);
+    clean(adjNodes); 
     free(current);
 
   }

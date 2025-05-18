@@ -227,3 +227,9 @@ do., 18 de may. de 2025 15:52:39:
  tests:  10|0
 total_score: 70/70
 f235209
+do., 18 de may. de 2025 15:56:58: 
+ sudoku.c | 25 +++++++++++++------------
+ 1 file changed, 13 insertions(+), 12 deletions(-)
+ tests:  10|0
+total_score: 70/70
+baf1887
