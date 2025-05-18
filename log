@@ -173,3 +173,25 @@ sudoku.c:203:15: error: assignment makes pointer from integer without a cast [-W
                ^
 cc1.exe: all warnings being treated as errors
 13f2dac
+do., 18 de may. de 2025 15:47:24: 
+ sudoku.c | 20 +++++++++++---------
+ 1 file changed, 11 insertions(+), 9 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c:115:1: error: "/*" within comment [-Werror=comment]
+ /*Recuerde que los nodos adyacentes son generados aplicando las acciones al estado actual.
+  
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:143:8: error: implicit declaration of function 'is_valid' [-Werror=implicit-function-declaration]
+     if(is_valid(new))
+        ^~~~~~~~
+test.c: In function 'test_dfs':
+test.c:206:19: error: implicit declaration of function 'DFS' [-Werror=implicit-function-declaration]
+     Node* final = DFS(initial, &cont);
+                   ^~~
+test.c:206:19: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+test.c:230:11: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     final = DFS(initial, &cont);
+           ^
+cc1.exe: all warnings being treated as errors
+3ff02ed

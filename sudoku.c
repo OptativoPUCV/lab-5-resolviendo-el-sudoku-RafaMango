@@ -52,6 +52,7 @@ Si el estado es válido la función retorna 1, si no lo es retorna 0.
 Para marcar los números que vayan apareciendo en una fila/columna/submatriz puede usar un arreglo de enteros de largo 10 inicializado con 0s. 
 Cada vez que aparezca un número i, verifique que la casilla i del arreglo sea igual a 0, luego márquela con un '1'. Si la casilla es '1' quiere decir que 
 el número ya estaba marcado por lo que la fla/columna/submatriz no es válida.*/
+/*
 int is_valid(Node* n)
 {
   int i,j,k,p;
@@ -176,8 +177,8 @@ c) Obtenga la lista de nodos adyacentes al nodo.
 d) Agregue los nodos de la lista (uno por uno) al stack S.
 e) Libere la memoria usada por el nodo.
 Si terminó de recorre el grafo sin encontrar una solución, retorne NULL.
-Almacene en la variable contador, la cantidad de iteraciones que realiza el algoritmo.
-*/
+Almacene en la variable cont, la cantidad de iteraciones que realiza el algoritmo.
+
 Node* DFS(Node* initial, int* contador)
 {
   Stack * pila = createStack();
@@ -195,14 +196,15 @@ Node* DFS(Node* initial, int* contador)
       clean(pila);
       return current;
     }
-    List* adj = get_adj_nodes(current);
-    Node* nodeAdj = first(adj);
-    while(!is_empty(adj))
+    List* adj_nodes = get_adj_nodes(current);
+    Node* node;
+    while(!is_empty(adj_nodes))
     {
-      push(pila, nodeAdj);
-      nodeAdj = nex(adj);
+      node = front(adj_nodes);
+      popFront(adj_nodes);
+      pushBack(pila, node);
     }
-    clean(adj);
+    clean(adj_nodes);
     free(current);
 
   }
@@ -211,7 +213,7 @@ Node* DFS(Node* initial, int* contador)
   return NULL;
 }
 
-
+*/
 
 /*
 int main( int argc, char *argv[] ){
