@@ -195,3 +195,17 @@ test.c:230:11: error: assignment makes pointer from integer without a cast [-Wer
            ^
 cc1.exe: all warnings being treated as errors
 3ff02ed
+do., 18 de may. de 2025 15:48:19: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c:115:1: error: "/*" within comment [-Werror=comment]
+ /*Recuerde que los nodos adyacentes son generados aplicando las acciones al estado actual.
+  
+sudoku.c: In function 'get_adj_nodes':
+sudoku.c:143:8: error: implicit declaration of function 'is_valid' [-Werror=implicit-function-declaration]
+     if(is_valid(new))
+        ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+70a23b6

@@ -178,9 +178,10 @@ d) Agregue los nodos de la lista (uno por uno) al stack S.
 e) Libere la memoria usada por el nodo.
 Si terminó de recorre el grafo sin encontrar una solución, retorne NULL.
 Almacene en la variable cont, la cantidad de iteraciones que realiza el algoritmo.
-
+*/
 Node* DFS(Node* initial, int* contador)
 {
+  /*
   Stack * pila = createStack();
   pushBack(pila, initial);
   Node* current;
@@ -209,11 +210,10 @@ Node* DFS(Node* initial, int* contador)
 
   }
   clean(pila);
-
+  */
   return NULL;
 }
 
-*/
 
 /*
 int main( int argc, char *argv[] ){
