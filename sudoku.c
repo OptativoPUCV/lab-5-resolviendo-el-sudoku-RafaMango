@@ -151,9 +151,6 @@ List* get_adj_nodes(Node* n)
 
   return list;
 }
- 
-
-
 /*4.Implemente la función int is_final(Node * n). Esta función retorna 1 si el nodo corresponde a un nodo final (es decir, todos los valores de la matriz son distintos a 0) y 0 en caso contrario.
 Ya está listo el grafo implícito, ahora necesitamos construir un método de búsqueda que a partir del estado inicial sea capaz de explorar el grafo de manera sistemática hasta alcanzar un nodo final.*/
 int is_final(Node* n)
@@ -170,6 +167,17 @@ int is_final(Node* n)
   return 1; // retorna 1 si el nodo corresponde a un nodo final
 }
 
+/*
+Cree un stack S (pila) e inserte el nodo.
+Mientras el stack S no se encuentre vacío:
+a) Saque y elimine el primer nodo de S.
+b) Verifique si corresponde a un estado final, si es así retorne el nodo.
+c) Obtenga la lista de nodos adyacentes al nodo.
+d) Agregue los nodos de la lista (uno por uno) al stack S.
+e) Libere la memoria usada por el nodo.
+Si terminó de recorre el grafo sin encontrar una solución, retorne NULL.
+Almacene en la variable contador, la cantidad de iteraciones que realiza el algoritmo.
+*/
 Node* DFS(Node* initial, int* contador)
 {
   Stack * pila = createStack();
@@ -187,15 +195,14 @@ Node* DFS(Node* initial, int* contador)
       clean(pila);
       return current;
     }
-    List* adj_nodes = get_adj_nodes(current);
-    Node* node;
-    while(!is_empty(adj_nodes))
+    List* adj = get_adj_nodes(current);
+    Node* nodeAdj = first(adj);
+    while(!is_empty(adj))
     {
-      node = front(adj_nodes);
-      popFront(adj_nodes);
-      pushBack(pila, node);
+      push(pila, nodeAdj);
+      nodeAdj = nex(adj);
     }
-    clean(adj_nodes);
+    clean(adj);
     free(current);
 
   }

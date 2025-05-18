@@ -159,3 +159,17 @@ sá., 17 de may. de 2025 17:02:23:
  tests:  10|0
 total_score: 70/70
 58cfba1
+do., 18 de may. de 2025 15:46:01: 
+ sudoku.c | 24 +++++++++++++++++-------
+ 1 file changed, 17 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:203:17: error: implicit declaration of function 'nex' [-Werror=implicit-function-declaration]
+       nodeAdj = nex(adj);
+                 ^~~
+sudoku.c:203:15: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+       nodeAdj = nex(adj);
+               ^
+cc1.exe: all warnings being treated as errors
+13f2dac
