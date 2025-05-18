@@ -120,7 +120,7 @@ List* get_adj_nodes(Node* n)
   List* list=createList();
   int fila = -1;
   int col = -1;
-  int i,j;
+  int i,j, num;
   for(i = 0; i < 9 && fila == -1; i++)
   {
     for(j = 0; j < 9 && fila == -1; j++)
@@ -136,7 +136,7 @@ List* get_adj_nodes(Node* n)
   {
     return list; //no hay nodos adyacentes
   }
-  for(int num = 1; num <= 9; num++)
+  for(num = 1; num <= 9; num++)
   {
     Node * new = copy(n);
     new->sudo[fila][col] = num;
@@ -181,7 +181,6 @@ Almacene en la variable cont, la cantidad de iteraciones que realiza el algoritm
 */
 Node* DFS(Node* initial, int* contador)
 {
-  /*
   Stack * pila = createStack();
   pushBack(pila, initial);
   Node* current;
@@ -210,7 +209,6 @@ Node* DFS(Node* initial, int* contador)
 
   }
   clean(pila);
-  */
   return NULL;
 }
 
